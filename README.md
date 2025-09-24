@@ -1,14 +1,31 @@
-# Wiland-Style Data Engineering Pipeline (Instacart)
+# Clickstream-Data-Processing-with-Spark (Instacart)
 
 End-to-end **Spark** pipeline built to match the Wiland, Inc. Data Engineer JD.
 It processes the **Instacart Online Grocery Basket** dataset (3M+ orders) into **Bronze → Silver → Gold** layers
 and writes business KPIs ready for analytics. The repo demonstrates:
 
+
 - **Technologies:** Spark (PySpark + Scala), HDFS-ready I/O, Linux scripts, Python, optional MySQL sink
 - **Lifecycle:** config-driven jobs, unit tests (PyTest), docs, and release/run scripts
 - **Collaboration:** product requirements → technical design mapping (`docs/`)
 
-> GitHub should include only a small sample CSV. Keep the large Instacart CSVs locally and link to Kaggle in the README.
+## 📂 Dataset
+
+This project uses the **Instacart Online Grocery Basket Analysis** dataset (3M+ orders, 200k users).  
+Due to GitHub file size limits, the raw CSV files are **not included** in this repository.  
+
+👉 Download the dataset from Kaggle:  
+[Instacart Online Grocery Basket Dataset]([https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-datase](https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset)t)  
+
+After downloading, place the following CSV files in the `data/` folder:  
+- `orders.csv`  
+- `order_products__prior.csv`  
+- `order_products__train.csv`  
+- `products.csv`  
+- `aisles.csv`  
+- `departments.csv`  
+
+For quick testing, a small demo file `sample_clickstream.csv` is included in the repo.  
 
 ## Architecture
 ```
