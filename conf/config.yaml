@@ -1,0 +1,23 @@
+app:
+  # INPUTS (adjust as needed)
+  orders: data/orders.csv
+  order_products_prior: data/order_products__prior.csv
+  order_products_train: data/order_products__train.csv
+  products: data/products.csv
+  aisles: data/aisles.csv
+  departments: data/departments.csv
+
+  # OUTPUT ROOTS (can be hdfs://)
+  bronze_root: data/bronze
+  silver_root: data/silver
+  gold_root: data/gold
+
+  shuffle_partitions: 200
+
+jdbc:
+  url: jdbc:mysql://localhost:3306/analytics
+  user: root
+  password: rootpw
+  driver: com.mysql.cj.jdbc.Driver
+  table_prefix: instacart_
+  mode: overwrite
